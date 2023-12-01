@@ -2,6 +2,8 @@ from flask import Flask, request, jsonify, abort
 import sentimentAnalysis 
 from dotenv import load_dotenv
 import os 
+import nltk
+nltk.download('vader_lexicon')
 app = Flask(__name__)
 load_dotenv()
 api_key = os.getenv('API_KEY')
